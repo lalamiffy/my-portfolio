@@ -14,7 +14,7 @@ const projectsData = [
       "Responsive portfolio built with Next.js and Tailwind CSS, deployed through AWS Amplify.",
     image: `${basePath}/images/projects/1a.png`,
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/lalamiffy/nextjs-portfolio-main",
+    gitUrl: "https://github.com/lalamiffy/my-portfolio",
     previewUrl: "https://master.d20f242htfsdvb.amplifyapp.com/",
   },
   {

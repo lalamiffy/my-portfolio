@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  metadataBase: new URL('https://lalamiffy.github.io/nextjs-portfolio-main/'),
+  metadataBase: new URL('https://lalamiffy.github.io/my-portfolio/'),
   title: 'Jianna Huang | Cloud & Software',
   description:
     'Portfolio of Jianna Huang, a cloud support professional with experience in Windows, Linux, networking, cloud infrastructure and software development.',
@@ -25,19 +25,19 @@ export const metadata = {
   authors: [{ name: 'Jianna Huang' }],
   creator: 'Jianna Huang',
   alternates: {
-    canonical: 'https://lalamiffy.github.io/nextjs-portfolio-main/',
+    canonical: 'https://lalamiffy.github.io/my-portfolio/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://lalamiffy.github.io/nextjs-portfolio-main/',
+    url: 'https://lalamiffy.github.io/my-portfolio/',
     title: 'Jianna Huang | Cloud & Software',
     description:
       'Cloud support, infrastructure and software development portfolio.',
     siteName: 'Jianna Huang | Cloud & Software',
     images: [
       {
-        url: 'https://lalamiffy.github.io/nextjs-portfolio-main/images/og-image.svg',
+        url: 'https://lalamiffy.github.io/my-portfolio/images/og-image.svg',
         width: 1200,
         height: 630,
         alt: 'Jianna Huang cloud and software portfolio',
@@ -50,7 +50,7 @@ export const metadata = {
     description:
       'Cloud support, infrastructure and software development portfolio.',
     images: [
-      'https://lalamiffy.github.io/nextjs-portfolio-main/images/og-image.svg',
+      'https://lalamiffy.github.io/my-portfolio/images/og-image.svg',
     ],
   },
   robots: {

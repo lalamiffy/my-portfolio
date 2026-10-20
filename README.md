@@ -4,8 +4,8 @@ Jianna Huang's portfolio website, built with Next.js and Tailwind CSS.
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/lalamiffy/nextjs-portfolio-main.git`
-2. Navigate to the project directory: `cd nextjs-portfolio-main`
+1. Clone the repository: `git clone https://github.com/lalamiffy/my-portfolio.git`
+2. Navigate to the project directory: `cd my-portfolio`
 3. Install the dependencies: `npm install`
 
 ## Usage
@@ -23,7 +23,7 @@ The same repository supports two deployments:
 
 - AWS Amplify continues to build the standard Next.js application from the `master` branch.
 - GitHub Actions creates a static export and deploys it to GitHub Pages at
-  `https://lalamiffy.github.io/nextjs-portfolio-main/`.
+  `https://lalamiffy.github.io/my-portfolio/`.
 
 The contact form submits directly to Formspree using
 `https://formspree.io/f/xaeqzrkj`. To replace it later, configure

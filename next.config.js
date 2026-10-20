@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const isGitHubPages = process.env.GITHUB_ACTIONS === "true";
-const repositoryName = "nextjs-portfolio-main";
+const repositoryName = "my-portfolio";
 
 const nextConfig = {
   output: isGitHubPages ? "export" : undefined,
