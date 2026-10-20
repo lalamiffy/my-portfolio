@@ -28,9 +28,9 @@ const Navbar = () => {
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link
           href={"/"}
-          className="text-2xl md:text-5xl text-white font-semibold"
+          className="text-xl sm:text-2xl lg:text-4xl text-white font-semibold"
         >
-          Jianna's Portfolio Website
+          Jianna Huang | Cloud &amp; Software
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (

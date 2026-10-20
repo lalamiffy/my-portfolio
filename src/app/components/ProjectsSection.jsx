@@ -4,44 +4,49 @@ import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/projects/1a.png",
+    title: "Next.js Portfolio Website",
+    description:
+      "Responsive portfolio built with Next.js and Tailwind CSS, deployed through AWS Amplify.",
+    image: `${basePath}/images/projects/1a.png`,
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/lalamiffy/nextjs-portfolio-main",
+    previewUrl: "https://master.d20f242htfsdvb.amplifyapp.com/",
   },
   {
     id: 2,
     title: "Restaurant Reservation Website",
-    description: "Project 2 description",
-    image: "/images/projects/2a.png",
+    description:
+      "Full-stack .NET and SQL Server application for reservations, sitting schedules, table assignments and reporting.",
+    image: `${basePath}/images/projects/2a.png`,
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/lalamiffy/RestaurantReservation",
+    previewUrl: "https://irongirl.azurewebsites.net/",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "/images/projects/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "Weekly Payment Calculator",
+    description:
+      "C# application that imports employee data from CSV files, calculates payments and generates payslip data.",
+    image: `${basePath}/images/projects/3.png`,
+    tag: ["All", "Software"],
+    gitUrl: "https://github.com/lalamiffy/Weekly-Payment-Calculator",
+    previewUrl: "https://github.com/lalamiffy/Weekly-Payment-Calculator",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4a.png",
+    title: "Mobile Ordering Application",
+    description:
+      "React Native and MongoDB ordering system with authentication, role-based access and REST API integration.",
+    image: `${basePath}/images/projects/4a.png`,
     tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/lalamiffy/OrderingApp",
+    previewUrl: "https://github.com/lalamiffy/OrderingApp",
   },
- 
 ];
 
 const ProjectsSection = () => {
@@ -63,7 +68,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects">
+    <section id="projects" className="scroll-mt-24">
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
@@ -82,6 +87,11 @@ const ProjectsSection = () => {
           onClick={handleTagChange}
           name="Mobile"
           isSelected={tag === "Mobile"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Software"
+          isSelected={tag === "Software"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">

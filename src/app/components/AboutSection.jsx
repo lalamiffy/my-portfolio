@@ -8,15 +8,13 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-2">
-        <li>C#/.NET</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>SQL</li>
-        <li>MongoDB</li>
-        <li>HTML, CSS, Bootstrap</li>
-        <li>Linux</li>
-        <li>AWS Cloud Services</li>
+      <ul className="list-disc pl-5 space-y-1">
+        <li>Windows Server, Linux and system troubleshooting</li>
+        <li>TCP/IP networking, DNS, DHCP, firewalls and routing</li>
+        <li>Cloud infrastructure, virtual machines and monitoring</li>
+        <li>Python, C#/.NET, SQL and Power BI</li>
+        <li>JavaScript, Node.js, React and React Native</li>
+        <li>REST APIs, MongoDB, Git, HTML and CSS</li>
       </ul>
     ),
   },
@@ -24,10 +22,11 @@ const TAB_DATA = [
     title: "Education",
     id: "education",
     content: (
-      <ul className="list-disc pl-2">
-        <li>Diploma of Cloud Computing</li>
-        <li>Diploma of Information Technology Advance Programming</li>
-        <li>Certificate IV in Information Technology Programming</li>
+      <ul className="list-disc pl-5 space-y-1">
+        <li>Diploma of Cloud Computing, Swinburne University of Technology</li>
+        <li>Diploma of Information Technology, TAFE NSW</li>
+        <li>Certificate IV in Information Technology, TAFE NSW</li>
+        <li>Bachelor&apos;s Degree, Beijing Institute of Technology, Zhuhai</li>
       </ul>
     ),
   },
@@ -35,12 +34,13 @@ const TAB_DATA = [
     title: "Certifications",
     id: "certifications",
     content: (
-      <ul className="list-disc pl-2">
-        <li>AWS Certified Cloud Practitioner (CCP)</li>
-        <li>AWS Certified Solutions Architect - Associate (SAA)</li>
-        <li>AWS Certified SysOps Administrator - Associate (SOA)</li>
-        <li>AWS Certified AI Practitioner (AIF)</li>
-        <li>AWS Certified Developer - Associate (DVA)</li>
+      <ul className="list-disc pl-5 space-y-1">
+        <li>AWS Certified CloudOps Engineer - Associate</li>
+        <li>AWS Certified Solutions Architect - Associate</li>
+        <li>AWS Certified Developer - Associate</li>
+        <li>AWS Certified AI Practitioner</li>
+        <li>Cisco Networking Essentials</li>
+        <li>Cisco Linux Unhatched</li>
       </ul>
     ),
   },
@@ -49,6 +49,7 @@ const TAB_DATA = [
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
   const [isPending, startTransition] = useTransition();
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
   const handleTabChange = (id) => {
     startTransition(() => {
@@ -57,20 +58,25 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white" id="about">
+    <section className="text-white scroll-mt-24" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} />
+        <Image
+          src={`${basePath}/images/about-image.png`}
+          alt="Technology workspace illustration"
+          width={500}
+          height={500}
+        />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am an aspiring IT professional with a strong foundation in
-            programming and cloud technologies. I hold an IT diploma from TAFE
-            and have practical experience developing web and mobile applications
-            in collaborative team settings. I took the initiative to learn phone
-            repair, gaining hands-on skills in diagnosing and fixing issues. I
-            am continuously expanding my technical knowledge and skills, and I
-            am eager to apply my enthusiasm to new challenges in the tech
-            industry.
+            I am a Cloud Support Associate specialising in Windows at AWS, where
+            I support enterprise customers with operating system, networking,
+            performance and patching issues across cloud environments. I use
+            logs, monitoring data and structured fault isolation to identify
+            root causes, document findings and provide clear next steps. Alongside
+            technical support, I build software with Python, C#/.NET, SQL,
+            JavaScript and React, and I am completing a Diploma of Cloud
+            Computing at Swinburne University of Technology.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
